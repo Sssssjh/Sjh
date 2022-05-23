@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <title>管理后台</title>
+</head>
+<body class="login-wrap">
+    <div class="login-container">
+        <div id="top2"><span><a id="top">学生成绩管理系统</a></span></div>
+        <form class="login-form" th:action="@{/user/login}">
+            <div class="input-group">
+                <input type="text" id="username" name="username" class="input-field">
+                <label for="username" class="input-label">
+                    <span class="label-title">用户名</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <input type="text" id="password" name="password" class="input-field">
+                <label for="password" class="input-label">
+                    <span class="label-title">密码</span>
+                </label>
+            </div>
+            <div class="input-group"><a th:text="${msg}"></a></div>
+            <button class="login-button">登录</button>
+        </form>
+    </div>
+</body>
+<script  th:src="@{/js/layui.js}"></script>
+<script  th:src="@{/js/login.js}" data-main="login"></script>
+</html>
